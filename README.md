@@ -1,20 +1,25 @@
-Login With Forum Account
+Login With iOSTuts.Com Forum Account
 ## Setup API
 
 Start by adding the following to your project
 
+```
 #import "iOSTutsAPI/iOSTuts.h"
+```
 
 ### Makefile config (Theos)
 
 #Edit TWEAK_NAME and remove @@
 
+```
 @@TWEAK_NAME@@_LDFLAGS += iOSTutsAPI/libiOSTuts.a
+```
 
 ### API Integration
 
-#import "iOSTutsAPI/iOSTuts.h"
 
+#import "iOSTutsAPI/iOSTuts.h"
+```
 - (void)viewDidLoad {
 
     iOSTuts *Auth = [[iOSTuts alloc] init];
@@ -35,13 +40,16 @@ Start by adding the following to your project
         NSLog(@"Avatar URL: %@", avatarUrl);
     }];
 }
+```
 
 
+```
 - (void)logoutUser {
     iOSTuts *Auth = [[iOSTuts alloc] init];
     [Auth logout];
     NSLog(@"Người dùng đã đăng xuất.");
 }
+```
 
 ### Author
 
